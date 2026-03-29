@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>HubSpot Support</title>
+    <link rel="icon" href="img/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#f5f8fc;
+}
+
+/* NAVBAR */
+
+.support-navbar{
+background:white;
+box-shadow:0 3px 12px rgba(0,0,0,0.1);
+padding:12px 0;
+position: sticky;
+top: 0;
+z-index: 2311;
+filter: drop-shadow(14px 5px 5px rgb(255, 140, 114));
+}
+
+.logo{
+font-weight:700;
+font-size:22px;
+color:#ff5c35;
+}
+
+.nav-hover{
+margin-right:20px;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-hover:hover{
+color:#ff5c35;
+}
+
+.home-btn{
+background:#ff5c35;
+color:white;
+padding:8px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.home-btn:hover{
+background:#e24e2a;
+}
+
+/* HERO */
+
+.support-hero{
+background:linear-gradient(135deg,#ff5c35,#ff5c35);
+color:white;
+text-align:center;
+padding:110px 20px;
+}
+
+.support-hero h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.support-search{
+width:600px;
+max-width:90%;
+padding:16px;
+border-radius:10px;
+border:none;
+font-size:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* STATS */
+
+.support-stats{
+background:white;
+padding:60px 0;
+}
+
+.support-stats h2{
+color:#ff5c35;
+font-weight:700;
+}
+
+/* SUPPORT CARDS */
+
+.support-section{
+padding:80px 20px;
+}
+
+.support-card{
+background:white;
+border-radius:12px;
+padding:30px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+cursor:pointer;
+}
+
+.support-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 35px rgba(0,0,0,0.15);
+}
+
+.support-icon{
+font-size:35px;
+color:#ff5c35;
+margin-bottom:15px;
+}
+
+/* GUIDE */
+
+.guide-section{
+padding:80px 0;
+background:#f6f9fc;
+}
+
+.guide-box{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.guide-box:hover{
+transform:translateY(-6px);
+}
+
+/* ARTICLES */
+
+.articles{
+background:white;
+padding:80px 20px;
+}
+
+.article-item{
+padding:16px;
+border-bottom:1px solid #eee;
+cursor:pointer;
+transition:0.3s;
+font-size:17px;
+}
+
+.article-item:hover{
+padding-left:25px;
+color:#ff5c35;
+}
+
+/* FAQ */
+
+.faq-section{
+padding:80px 0;
+}
+
+/* COMMUNITY */
+
+.community{
+background:#ff5c35;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.community-btn{
+background:white;
+color:#ff5c35;
+padding:12px 24px;
+border:none;
+border-radius:6px;
+font-weight:600;
+margin-top:15px;
+}
+
+/* CONTACT */
+
+.contact-support{
+background:linear-gradient(135deg,#ff5c35,#ff7a59);
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.support-btn{
+background:white;
+color:#ff5c35;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+margin:10px;
+font-weight:600;
+transition:0.3s;
+}
+
+.support-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg support-navbar">
+<div class="container">
+
+<a class="navbar-brand logo">HubSpot Support</a>
+
+<ul class="navbar-nav ms-auto align-items-center">
+
+<li class="nav-item">
+<a class="nav-link nav-hover" href="#"><i class="fa-solid fa-book"></i> Help Articles</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link nav-hover" href="#"><i class="fa-solid fa-headset"></i> Contact Support</a>
+</li>
+
+<li class="nav-item">
+<a href="index.html" class="home-btn"><i class="fa-solid fa-house"></i> Home</a>
+</li>
+
+</ul>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="support-hero">
+
+<h1>How can we help you?</h1>
+
+<p>Search our help center or browse support topics.</p>
+
+<input class="support-search" placeholder="Search help articles...">
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="support-stats">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3">
+<h2>10K+</h2>
+<p>Help Articles</p>
+</div>
+
+<div class="col-md-3">
+<h2>24/7</h2>
+<p>Support Available</p>
+</div>
+
+<div class="col-md-3">
+<h2>5M+</h2>
+<p>Users Helped</p>
+</div>
+
+<div class="col-md-3">
+<h2>98%</h2>
+<p>Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SUPPORT CATEGORIES -->
+
+<section class="support-section">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="support-card">
+<i class="fa-solid fa-rocket support-icon"></i>
+<h4>Getting Started</h4>
+<p>Learn how to begin using the platform.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="support-card">
+<i class="fa-solid fa-user support-icon"></i>
+<h4>Account Help</h4>
+<p>Manage your profile and settings.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="support-card">
+<i class="fa-solid fa-credit-card support-icon"></i>
+<h4>Billing</h4>
+<p>Payment and subscription support.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="support-card">
+<i class="fa-solid fa-wrench support-icon"></i>
+<h4>Troubleshooting</h4>
+<p>Fix technical issues quickly.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="support-card">
+<i class="fa-solid fa-link support-icon"></i>
+<h4>Integrations</h4>
+<p>Connect your favorite tools.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="support-card">
+<i class="fa-solid fa-headset support-icon"></i>
+<h4>Contact Support</h4>
+<p>Reach our support team.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GETTING STARTED GUIDE -->
+
+<section class="guide-section">
+
+<div class="container">
+
+<h2 class="text-center mb-5">Getting Started Guide</h2>
+
+<div class="row text-center">
+
+<div class="col-md-3">
+<div class="guide-box">
+<h3>1</h3>
+<p>Create your account</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="guide-box">
+<h3>2</h3>
+<p>Connect tools</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="guide-box">
+<h3>3</h3>
+<p>Launch campaigns</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="guide-box">
+<h3>4</h3>
+<p>Track results</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ARTICLES -->
+
+<section class="articles">
+
+<div class="container">
+
+<h2 class="text-center mb-5">Popular Help Articles</h2>
+
+<div class="article-item">How to create your first marketing campaign</div>
+<div class="article-item">How to connect your email account</div>
+<div class="article-item">Managing contacts in CRM</div>
+<div class="article-item">Using AI tools for marketing</div>
+<div class="article-item">Setting up live chat</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq-section">
+
+<div class="container">
+
+<h2 class="text-center mb-5">Frequently Asked Questions</h2>
+
+<div class="accordion" id="faq">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">
+How do I create an account?
+</button>
+</h2>
+<div id="q1" class="accordion-collapse collapse show">
+<div class="accordion-body">
+Click the signup button and complete registration.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">
+How do I reset my password?
+</button>
+</h2>
+<div id="q2" class="accordion-collapse collapse">
+<div class="accordion-body">
+Use the forgot password option on login page.
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section class="community">
+
+<h2>Join Our Community</h2>
+
+<p>Ask questions, share ideas, and learn from other users.</p>
+
+<button class="community-btn">Join Community</button>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-support">
+
+<h2>Still need help?</h2>
+
+<p>Our support team is ready to assist you.</p>
+
+<button class="support-btn">Start Live Chat</button>
+<button class="support-btn">Email Support</button>
+<button class="support-btn">Community Forum</button>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="icon" href="img/favicon.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Operations Hub | CloudKart</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f9ff;
+color:#333;
+}
+
+
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#ff5c35;
+}
+
+.nav-links a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+padding:120px 8%;
+}
+
+.hero h1{
+font-size:46px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#555;
+margin-bottom:30px;
+}
+
+.hero button{
+padding:14px 30px;
+border:none;
+background:#ff5c35;
+color:white;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+background:#6d28d9;
+}
+
+
+
+.dashboard{
+background:white;
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.widget{
+background:#fff3f0;
+padding:15px;
+margin-bottom:12px;
+border-radius:8px;
+font-size:14px;
+}
+
+
+.features{
+padding:100px 8%;
+text-align:center;
+}
+
+.features h2{
+font-size:34px;
+margin-bottom:60px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
+}
+
+.feature{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(124,58,237,0.2);
+}
+
+.feature i{
+font-size:32px;
+color:#ff5c35;
+margin-bottom:15px;
+}
+
+
+
+.workflow{
+padding:100px 8%;
+background:#fafaff;
+text-align:center;
+}
+
+.workflow h2{
+font-size:32px;
+margin-bottom:60px;
+}
+
+.steps{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.step{
+background:white;
+padding:30px;
+border-radius:12px;
+width:220px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.step:hover{
+transform:scale(1.05);
+}
+
+
+
+.integrations{
+padding:100px 8%;
+text-align:center;
+}
+
+.integrations h2{
+font-size:34px;
+margin-bottom:50px;
+}
+
+.integration-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:25px;
+}
+
+.tool{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.tool:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(124,58,237,0.2);
+}
+
+
+
+.data{
+padding:120px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.data-box{
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+
+
+.cta{
+background:#ff5c35;
+color:white;
+text-align:center;
+padding:120px 8%;
+}
+
+.cta h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.cta button{
+padding:15px 35px;
+border:none;
+background:white;
+color:#ff5c35;
+border-radius:30px;
+cursor:pointer;
+}
+
+
+
+.footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+.nav-links a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+position:relative;
+padding-bottom:4px;
+}
+
+.nav-links a:hover{
+color:#ff5c35;
+}
+
+.nav-links a.active{
+color:#ff5c35;
+}
+
+.nav-links a.active::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:3px;
+background:#ff5c35;
+border-radius:2px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="logo"> HubSpot</div>
+
+<div class="nav-links">
+<a href="index.html" class="active">Home</a>
+<a href="#">Products</a>
+<a href="#">Pricing</a>
+<a href="#">Resources</a>
+</div>
+
+</div>
+
+<section class="hero">
+
+<div>
+
+<h1>Operations Hub</h1>
+
+<p>
+Connect your apps, sync customer data, and automate business processes
+to create a powerful operations system.
+</p>
+
+<button>Start Automating</button>
+
+</div>
+
+<div class="dashboard">
+
+<div class="widget">✔ Data Sync Running</div>
+<div class="widget">✔ Workflow Automation Active</div>
+<div class="widget">✔ Apps Connected</div>
+<div class="widget">✔ Reports Updated</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>Operations Tools</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<i class="fa-solid fa-gear"></i>
+<h3>Workflow Automation</h3>
+<p>Create automated workflows to eliminate repetitive tasks.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-database"></i>
+<h3>Data Sync</h3>
+<p>Keep customer data synced across platforms.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Analytics</h3>
+<p>Track operational performance with detailed reports.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-link"></i>
+<h3>Integrations</h3>
+<p>Connect your favorite tools in one platform.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="workflow">
+
+<h2>How Automation Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>Connect Apps</h3>
+<p>Integrate all tools in one place.</p>
+</div>
+
+<div class="step">
+<h3>Sync Data</h3>
+<p>Automatically synchronize customer data.</p>
+</div>
+
+<div class="step">
+<h3>Create Workflows</h3>
+<p>Automate repetitive operations.</p>
+</div>
+
+<div class="step">
+<h3>Analyze Results</h3>
+<p>Track results using operational analytics.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="integrations">
+
+<h2>Integrations</h2>
+
+<div class="integration-grid">
+
+<div class="tool">Slack</div>
+<div class="tool">Google</div>
+<div class="tool">Shopify</div>
+<div class="tool">Stripe</div>
+<div class="tool">Zapier</div>
+<div class="tool">Salesforce</div>
+
+</div>
+
+</section>
+
+<section class="data">
+
+<div>
+
+<h2>Clean and Sync Your Data</h2>
+
+<p>
+Operations Hub helps businesses keep their customer data clean,
+organized, and synchronized across different applications.
+</p>
+
+</div>
+
+<div class="data-box">
+
+<p>✔ Data synchronization</p>
+<p>✔ Data quality automation</p>
+<p>✔ Programmable automation</p>
+<p>✔ Real-time reporting</p>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Start Automating Your Business Operations</h2>
+
+<button>Get Started</button>
+
+</section>
+
+<div class="footer">
+
+<p>© 2026 HubSpot. All Rights Reserved To Savan Patel.</p>
+
+</div>
+
+</body>
+</html>

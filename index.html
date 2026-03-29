@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="img/favicon.png">
+  <title>  Hubspot </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+
+function toggleChat() {
+
+var chatBox = document.getElementById("chatBox");
+
+if (chatBox.style.display === "block") {
+chatBox.style.display = "none";
+} else {
+chatBox.style.display = "block";
+}
+
+}
+
+</script>
+
+  <style>
+    body{
+      cursor: none;
+    }
+
+    #front{
+
+      font-weight: 700;
+    }
+    .photu {
+
+      height: 100px;
+      width: 100px;
+    }
+    #ker{
+
+      margin-top: 40px;
+      font-weight: 700;
+    }
+    .butt{
+
+      width: 180px;
+      height: 32px;
+      background-color: rgb(252, 103, 49);
+      border-radius: 8px;
+      margin-left: 90px;
+    }
+    .hell{
+      height: 335px;
+      width: 550px;
+    }
+    .get{
+       background-color: orangered;
+        color: rgb(9, 9, 9);
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 15px;
+        cursor: pointer;              
+        border-color: rgb(255, 108, 68); 
+        filter: drop-shadow(3px 4px 5px rgb(102, 29, 65));
+    }
+    .set{
+
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 500px;
+    }
+    .de{
+background:#ff5c35;
+color:white;
+font-size:16px;
+padding:12px 22px;
+border-radius:8px;
+border:none;
+transition:0.3s;
+}
+
+.de:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+    .carousel{
+      margin: 27px auto;
+      width: 90%;
+      
+      display: flex;
+      overflow-x: auto;
+      
+      
+    }
+    .carousel::-webkit-scrollbar{
+      display: none;
+    }
+    .card{
+      flex: 0 0 5em; 
+      height: 5em;
+      padding: 1em;
+      background-color:rgb(255, 255, 255); 
+      font-size: 3em;
+      border-radius: 1em;
+      text-align: center;
+      align-items: center;
+    }
+    .group{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      animation: spin 10s infinite linear;
+      padding-right: 1em;
+
+    }
+    @keyframes spin{
+      from { translate: 0;}
+      to { translate: -100%;}
+    }
+    .ll{
+      height: 600px;
+      width: 540px;
+    }
+    .qq{
+
+      width: 130px;
+      height: 130px;
+      background-color: brown;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 45px;
+      font-size: 25px;
+      color: #ffffff;
+      margin-left: 31px;
+    }
+    .oo{
+
+      width: 200px;
+      height: 60px;
+      background-color: orangered;
+      border-radius: 10px;
+      font-size: large;
+      color: #ffffff;
+
+    }
+    .ee{
+
+      height: 300px;
+      width: 500px;
+    }
+    .zz{
+
+      border: solid black 2px;
+      border-radius: 10px;
+      height: 490px;
+      width: auto;
+      padding: 15px;
+
+    }
+    .zz{
+border:solid black 2px;
+border-radius:10px;
+padding:15px;
+transition:0.3s;
+}
+
+.zz:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+border-color:#ff5c35;
+}
+
+
+
+
+    .nn{
+
+      border: solid black 1px ;
+      height: auto;
+      width: auto;
+      background-color: white;
+      padding: 18px;
+      border-radius: 10px;
+      margin: 15px;
+      font-size: large;
+      filter: drop-shadow(3px 3px 3px rgb(39, 34, 40));
+    }
+    .chomu{
+       background-color: #f0f7ff;
+        border-radius: 15px;
+        padding: 20px;
+        filter: drop-shadow(10px 7px 5px rgb(136, 136, 146));
+        height: 160px;
+        width: 330px;
+    }
+    .png{
+
+      height: 25px;
+      width: 25px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px;
+      color: black;
+      justify-content: end;
+    }
+    .circle{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:conic-gradient(orangered 0% 64%, #f1c7a5 64% 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.circle::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:#f5f2ee;
+    border-radius:50%;
+}
+
+.circle span{
+    position:relative;
+    font-size:48px;
+    color:#333;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI", Arial;
+}
+
+body{
+background:#f5f5f5;
+}
+
+
+
+.top-bar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 80px;
+font-size:14px;
+background:#fafafa;
+border-bottom:1px solid #eee;
+}
+
+.top-left span{
+margin-right:20px;
+cursor:pointer;
+color:#333;
+}
+
+.top-left span:hover{
+color:#ff5c35;
+}
+
+.top-right span{
+margin-left:20px;
+cursor:pointer;
+}
+
+.top-right span:hover{
+color:#ff5c35;
+}
+
+.top-right i{
+margin-right:15px;
+cursor:pointer;
+}
+
+
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+
+
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#ff5c35;
+}
+
+
+
+.nav-menu{
+display:flex;
+list-style:none;
+}
+
+.nav-menu li{
+margin:0 25px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+position:relative;
+}
+
+
+
+.nav-menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#ff5c35;
+transition:0.3s;
+}
+
+.nav-menu a:hover::after{
+width:100%;
+}
+
+.nav-menu a:hover{
+color:#ff5c35;
+}
+
+
+
+.cta-btn{
+background:#ff5c35;
+color:white;
+border:none;
+padding:12px 24px;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.cta-btn:hover{
+background:#e54b27;
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+
+
+.switch{
+position:relative;
+display:inline-block;
+width:40px;
+height:20px;
+margin-right:8px;
+}
+
+.switch input{
+display:none;
+}
+
+.slider{
+position:absolute;
+cursor:pointer;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#ccc;
+border-radius:20px;
+}
+
+.slider:before{
+position:absolute;
+content:"";
+height:16px;
+width:16px;
+left:2px;
+bottom:2px;
+background:white;
+border-radius:50%;
+transition:.3s;
+}
+
+input:checked + .slider{
+background:#ff5c35;
+}
+
+input:checked + .slider:before{
+transform:translateX(20px);
+}
+
+
+.product-menu{
+position:relative;
+padding-bottom:15px; 
+}
+
+
+.product-dropdown{
+position:absolute;
+top:100%;     
+left:0;
+background:white;
+width:240px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+display:none;
+flex-direction:column;
+padding:10px 0;
+z-index:999;
+}
+
+
+.product-dropdown a{
+display:block;
+padding:12px 20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:0.2s;
+}
+
+.product-dropdown a:hover{
+background:#f5f5f5;
+color:#ff5c35;
+}
+
+.product-menu:hover .product-dropdown{
+display:flex;
+}
+.navbar{
+overflow:visible;
+}
+.product-dropdown{
+position:absolute;
+top:100%;
+left:0;
+background:white;
+width:240px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:0.3s;
+}
+
+.product-menu:hover .product-dropdown{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+.product-dropdown i{
+margin-right:10px;
+color:#ff5c35;
+}
+.product-menu i{
+transition:0.3s;
+}
+
+.product-menu:hover i{
+transform:rotate(180deg);
+}
+
+.shin:hover{
+color:#ffffff;
+transform-style: preserve-3d;
+transform: scale(1.1);
+}
+
+.footer-section{
+background:#1f1f1f;
+padding:80px 0 40px;
+color:#8b8b8b;
+}
+
+.footer-column h5{
+color:#e5e5e5;
+margin-bottom:20px;
+font-weight:600;
+}
+
+.footer-column p{
+margin:6px 0;
+cursor:pointer;
+transition:0.3s;
+}
+
+.footer-column p:hover{
+color:#ff5c35;
+transform:translateX(3px);
+}
+
+.footer-social{
+text-align:center;
+margin-top:40px;
+}
+
+
+
+.footer-social img:hover{
+transform:scale(1.2);
+}
+
+.footer-logo{
+text-align:center;
+margin:30px 0;
+}
+
+.footer-logo img{
+height:70px;
+}
+
+.footer-legal{
+text-align:center;
+color:#9a9a9a;
+font-size:14px;
+margin-top:20px;
+}
+.footer-social{
+text-align:center;
+margin-top:40px;
+}
+
+.social-icon{
+height:35px;
+
+margin:10px;
+padding:2px;
+background:#1f1f1f;
+border-radius:50%;
+transition:all 0.3s ease;
+cursor:pointer;
+}
+
+
+
+.social-icon:hover{
+transform:translateY(-5px) scale(1.1);
+box-shadow:0 0 13px #ff5c35;
+background:#ff5c35;
+}
+
+
+.chat-container{
+position:fixed;
+bottom:25px;
+right:25px;
+z-index:999;
+}
+
+
+.chat-button{
+width:60px;
+height:60px;
+background:#ff5c35;
+color:white;
+font-size:26px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+cursor:pointer;
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+transition:0.3s;
+}
+
+.chat-button:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px #ff5c35;
+}
+
+
+.chat-box{
+width:260px;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+position:absolute;
+bottom:80px;
+right:0;
+display:none;
+animation:chatSlide 0.4s ease;
+}
+
+.chat-box h4{
+margin-bottom:10px;
+}
+
+.chat-box p{
+font-size:14px;
+color:#555;
+margin-bottom:10px;
+}
+
+.chat-box input{
+width:100%;
+padding:8px;
+border:1px solid #ccc;
+border-radius:5px;
+margin-bottom:10px;
+}
+
+.send-btn{
+width:100%;
+background:#ff5c35;
+border:none;
+color:white;
+padding:8px;
+border-radius:5px;
+cursor:pointer;
+}
+
+
+
+@keyframes chatSlide{
+from{
+transform:translateY(20px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+
+
+
+
+
+
+
+
+#scrollBar{
+
+position:fixed;
+top:0;
+left:0;
+height:4px;
+width:0%;
+background:linear-gradient(90deg,#ff5c35,#ff8a65);
+z-index:9999;
+transition:width 0.2s;
+
+}
+
+
+.resources-menu{
+position:relative;
+}
+
+
+
+.mega-menu{
+
+position:absolute;
+top:60px;
+left:0;
+width:600px;
+
+background:white;
+padding:40px;
+
+display:flex;
+justify-content:space-between;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:0.3s;
+
+}
+
+
+.resources-menu:hover .mega-menu{
+
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+
+}
+
+
+.mega-column{
+
+width:220px;
+
+}
+
+.mega-column h4{
+
+margin-bottom:15px;
+font-size:16px;
+
+}
+
+
+.mega-column p{
+
+margin:8px 0;
+cursor:pointer;
+color:#555;
+transition:0.2s;
+
+}
+
+.mega-column p:hover{
+
+color:#ff5c35;
+
+}
+
+
+.highlight{
+
+background:#f1f3f5;
+padding:8px;
+border-radius:6px;
+
+}
+
+
+
+
+.solutions-dropdown{
+
+position:absolute;
+
+top:70px;
+
+left:10%;
+transform:translateX(-50%);
+
+width:1100px;
+
+background:white;
+padding:30px;
+
+display:flex;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+opacity:0;
+visibility:hidden;
+
+transition:0.3s;
+
+}
+
+
+.solutions-menu:hover .solutions-dropdown{
+
+opacity:1;
+visibility:visible;
+
+transform:translateX(-50%) translateY(0);
+
+}
+
+.solutions-menu:hover .solutions-dropdown{
+
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+
+}
+
+
+.solutions-left{
+
+width:220px;
+border-right:1px solid #eee;
+padding-right:20px;
+
+}
+
+.left-item{
+
+padding:12px;
+margin-bottom:10px;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+.left-item:hover{
+
+background:#f3f4f6;
+
+}
+
+.left-item.active{
+
+background:#f3f4f6;
+font-weight:600;
+
+}
+
+
+.solutions-right{
+
+flex:1;
+padding-left:30px;
+
+}
+
+
+.solutions-grid{
+
+display:flex;
+gap:40px;
+margin-bottom:20px;
+
+}
+
+
+.solution-box{
+
+width:250px;
+
+}
+
+.solution-box h4{
+
+margin-bottom:10px;
+
+}
+
+.solution-box b{
+
+display:block;
+margin-top:10px;
+color:#222;
+
+}
+
+.solution-box p{
+
+font-size:14px;
+color:#666;
+margin-bottom:10px;
+
+}
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+#topBtn{
+position:fixed;
+bottom:100px;
+right:35px;
+
+width:45px;
+height:45px;
+
+border:none;
+border-radius:50%;
+
+background:#ff5c35;
+color:white;
+
+font-size:18px;
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+#topBtn:hover{
+transform:translateY(-3px);
+}
+
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.de, .cta-btn, .get, .oo {
+  position: relative;
+  overflow: hidden;
+}
+
+.de::before,
+.cta-btn::before,
+.get::before,
+.oo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transition: 0.5s;
+}
+
+.de:hover::before,
+.cta-btn:hover::before,
+.get:hover::before,
+.oo:hover::before {
+  left: 100%;
+}
+
+
+
+
+
+
+
+
+.progress-circle{
+  position: fixed;
+  bottom: 40px;
+  right: auto;
+  left: 40px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.progress-circle svg{
+  transform: rotate(-90deg);
+}
+
+#bg{
+  fill: none;
+  stroke: #eee;
+  stroke-width: 6;
+}
+
+#progress{
+  fill: none;
+  stroke: #ff5c35;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 188; /* circumference */
+  stroke-dashoffset: 188;
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+.progress-circle span{
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cursor, .cursor-follower{
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* main dot */
+.cursor{
+  width: 10px;
+  height: 10px;
+  background: #ff5c35;
+}
+
+/* follower glow */
+.cursor-follower{
+  width: 40px;
+  height: 40px;
+  background: rgba(255,92,53,0.2);
+  backdrop-filter: blur(4px);
+  transition: transform 0.15s ease, width 0.3s, height 0.3s;
+}
+
+/* hover effect */
+.cursor-grow{
+  transform: scale(1.4);
+  background: rgba(255,92,53,0.4);
+}
+
+/* click effect */
+.cursor-click{
+  transform: scale(0.7);
+}
+  </style>
+</head>
+<body>
+  <div id="scrollBar"></div>
+    
+<div class="top-bar">
+
+<div class="top-left">
+<span><i class="fa-solid fa-globe"></i> English</span>
+
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<span>High Contrast</span>
+
+ <a href="support.html" style="color: #333;"> <span><i class="fa-regular fa-message"></i>  Customer Support</span> </a> 
+<span><i class="fa-regular fa-user"></i> Contact Sales</span>
+</div>
+
+<div class="top-right">
+<i class="fa-solid fa-magnifying-glass"></i>
+ <a href="LOGIN.HTML" style="color: #333;"> <span>  Login </span> </a>
+<a href="about.html" style="color: #333;"> <span>About <i class="fa fa-angle-down"></i></span></a>
+</div>
+
+
+</div>
+  
+
+<header class="navbar">
+
+<div class="logo">
+Hub<span>Spot</span>
+</div>
+
+<ul class="nav-menu">
+
+<li class="product-menu">
+<a href="#">Products <i class="fa fa-angle-down"></i></a>
+
+<div class="product-dropdown">
+<a href="cms.html">Content Hub</a>
+<a href="marketing.html">Marketing Hub</a>
+<a href="sales.html">Sales Hub</a>
+<a href="service.html">Service Hub</a>
+<a href="operations.html">Operations Hub</a>
+</div>
+
+</li>
+
+<li class="nav-item solutions-menu">
+
+<a href="#">Solutions ▾</a>
+
+<div class="solutions-dropdown">
+
+
+<div class="solutions-left">
+
+<div class="left-item active">By Use Case ➜</div>
+<div class="left-item">By Team Size ➜</div>
+<div class="left-item">Why HubSpot? ➜</div>
+
+</div>
+
+
+<div class="solutions-right">
+
+<div class="solutions-grid">
+
+<div class="solution-box">
+<h4>Marketing</h4>
+
+<b>Generate leads</b>
+<p>Convert visitors into contacts for your database.</p>
+
+<b>Automate marketing</b>
+<p>Create campaigns with automation and AI.</p>
+</div>
+
+<div class="solution-box">
+<h4>Sales</h4>
+
+<b>Build pipeline</b>
+<p>Generate a pipeline of high-quality prospects.</p>
+
+<b>Close deals</b>
+<p>Streamline your process and close more deals faster.</p>
+</div>
+
+<div class="solution-box">
+<h4>Customer Service</h4>
+
+<b>Scale support</b>
+<p>Support customers at scale with AI and a help desk.</p>
+
+<b>Drive retention</b>
+<p>Identify opportunities to improve customer health.</p>
+</div>
+
+</div>
+
+
+<hr>
+
+
+<div class="solutions-grid">
+
+<div class="solution-box">
+<h4>Content</h4>
+
+<b>Create content</b>
+<p>Easily craft content for your audience with help from AI.</p>
+
+<b>Manage content</b>
+<p>Organize, update and distribute content in one place.</p>
+</div>
+
+<div class="solution-box">
+<h4>Startups & Small Businesses</h4>
+
+<b>Find and reach customers</b>
+<p>Generate leads through content, AI and automation.</p>
+
+<b>Grow sales and get paid</b>
+<p>Prospect smarter and automate payments.</p>
+</div>
+
+<div class="solution-box">
+<h4>Artificial Intelligence</h4>
+
+<b>Resolve customer queries 24/7</b>
+<p>Scale service with an AI customer agent.</p>
+
+<b>Automate sales prospecting</b>
+<p>Identify and engage high-value leads with AI.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</li>
+
+<li>
+<a href="#">Pricing</a>
+</li>
+
+<li class="nav-item resources-menu">
+
+<a href="#">Resources ▾</a>
+
+<div class="mega-menu">
+
+<div class="mega-column">
+<h4>Featured Links</h4>
+<p>Spotlight: Product Updates</p>
+<p>What's New in HubSpot?</p>
+<p>Why Choose HubSpot?</p>
+<p>Sustainability</p>
+</div>
+
+<div class="mega-column">
+<h4>Community & Events</h4>
+<p>INBOUND Event</p>
+<p class="highlight">Webinars</p>
+<p>HubSpot Community</p>
+<p>HubSpot User Groups</p>
+
+<h4 style="margin-top:20px;">Partners</h4>
+<p>Solutions Partner Program</p>
+<p>Technology Partner Program</p>
+<p>Affiliate Partner Program</p>
+<p>Education Partner Program</p>
+<p>Startup Partner Program</p>
+</div>
+
+<div class="mega-column">
+<h4>Education</h4>
+<p>The Loop Marketing Playbook</p>
+<p>What is Inbound Marketing?</p>
+<p>HubSpot Blogs</p>
+<p>Free Courses & Certifications</p>
+<p>Ebooks, Guides & More</p>
+<p>HubSpot Knowledge Base</p>
+
+<h4 style="margin-top:20px;">Tools</h4>
+<p>Website Templates</p>
+<p>Developer Tools</p>
+</div>
+
+<div class="mega-column">
+<h4>Services</h4>
+<p>Onboarding</p>
+<p>Customer Training</p>
+<p>Migration</p>
+<p>Strategic Consulting</p>
+<p>Technical Consulting</p>
+<p>Hire a Solutions Partner</p>
+</div>
+
+</div>
+
+</li>
+
+</ul>
+
+ <form action="LOGIN.HTML">
+  <button class="cta-btn"> Get started free </button>
+ </form>
+ 
+
+</header>
+    <section>
+      <div class="row reveal"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p style="background-image: url('img/website-header-shot-diverse-group-600nw-2644639337.webp'); text-align: center; padding-top: 90px; color: whitesmoke;" class="set">
+
+                      <b> HUBSPOT CUSTOMER PLATFORM </b><br><br>
+                      <b style="font-size: 66px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" class="typing"> Where go-to-market <br>
+                      Teams go to Grow  </b><br><br>
+                      <b> Unite marketing, sales, and customer service on one AI-powered
+                                     customer platform that delivers results fast.</b><br><br><br>
+                                     <button class="de"> Get a Demo </button> <button class="de"> <a href="LOGIN.HTML" style="color: white;"> Get Started Free </a></button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #f8f5ee;"><br><br>
+      <div class="row reveal"></div>
+      <div class="container">
+        <div class="row">
+          <p > <u><b> Contact Us </b> </u> > <span style="color: rgb(118, 107, 107);font-weight: 400;">  Free Drag-and-Drop Website Builder </span>   </p>
+        </div> <br>
+        <div class="row">
+          <div class="col-md-6"> 
+            <img src="img/Screenshot 2026-02-26 121944.png" class="hell">
+          </div>
+          <div class="col-md-6"> 
+            <h1 style="font-size: 50px;font-family:Georgia, 'Times New Roman', Times, serif "> Free Drag-and-Drop Website Builder</h1>
+            <p style="font-size: 18px;"> Create and customize your own business website with an easy drag-and-drop website builder.</p>
+            <button class="get" style="color: #f8f5ee;"> Get Started Free </button><br> <br>
+            <p> No credit card required. Free and premium features available. </p>
+            <p style="font-size:20px;"> <span> &#10004;</span> Build and edit your website without any coding or technical skills.</p>
+            <p style="font-size:20px;"> <span> &#10004;</span> Publish your business website faster with a pre-built theme. </p>
+            <p style="font-size:20px;"> <span> &#10004;</span> Leverage custom modules to deliver a great user experience.</p>
+            </ul>
+          </div>
+        </div>
+      </div><br><br>
+
+
+    </section>
+    <section style="background-color: white;"> 
+      <div class="row reveal">
+
+      </div><br><br><br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:38px;"> Build a custom website with a free drag-and-drop editor. </h2> <br>
+            <p style="font-size: medium;line-height: 30px;font-size: 16px;"> Every business needs a website. But building and designing a website from scratch without the proper tools can be difficult.</p style="font-size: medium;line-height: 30px;font-size: 16px;"><br>
+            <p style="font-size: medium;line-height: 30px;font-size: 16px;"> With HubSpot, you don’t need to be a developer to build a beautiful, branded website. Our drag-and-drop website builder makes it easy to build a custom website for your business in no time at all. Track the success of your website in HubSpot’s customer platform, and watch as your business grows.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/Screenshot 2026-02-26 151002.png" style="height: 350px;width: 650px;">
+
+          </div>
+        </div>
+      </div><br><br><br>
+      <div class="container">
+        <div class="row">
+           <p style="text-align: center;font-size: medium;font-weight: 600;"> 288,000+ customers in over 135 countries grow their businesses with HubSpot</p>
+           <div class="carousel">
+            <div class="group">
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155049.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155055.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155103.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155111.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155124.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155118.png" alt=""></div>
+            </div>
+            <div aria-hidden class="group">
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155049.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155055.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155103.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155111.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155124.png" alt=""></div>
+              <div class="card"> <img src="img/Screenshot 2026-02-26 155118.png" alt=""></div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </section>
+    <section style="background-color: #f8f5ee;"><br><br><br><br>
+      <div class="row reveal">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"> 
+            <img src="img/Screenshot 2026-02-26 161400.png" class="ll">
+          </div>
+          <div class="col-md-6"><br><br><br><br><br>
+            <h1> Create impactful content with a WYSIWYG editor. </h1><br>
+            <p style="line-height: 28px;font-size: 20px;font-family: 'Times New Roman', Times, serif;"> When you have to fuss over code or complex content editors to build your website, it can be hard to visualize how the final product will look. With HubSpot's what-you-see-is-what-you-get (WYSIWYG) editor, you can see exactly how your content will appear to visitors as you build. Drag and drop modules into place, format text without HTML knowledge, and preview all changes before they go live. </p>
+          </div>
+        </div>
+      </div><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"> <br><br><br><br><br>
+            <h1> Choose from hundreds of themes to get started. </h1> <br>
+            <p style="line-height: 28px;font-size: 20px;font-family: 'Times New Roman', Times, serif;"> Take the guesswork out of web design with professionally built, customizable website themes that let you easily change the look and feel of your entire website. Then leverage built-in page templates, custom modules, style settings, and more. Your new website will be up and running in no time.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/Screenshot 2026-02-26 162243.png" class="ll">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"> 
+            <img src="img/Screenshot 2026-02-26 162510.png" class="ll">
+          </div>
+          <div class="col-md-6"><br><br><br><br>
+            <h1> Add a custom domain for free. </h1><br>
+            <p style="line-height: 28px;font-size: 20px;font-family: 'Times New Roman', Times, serif;"> Using a custom domain for your website helps establish a professional and credible appearance online. Don’t struggle to connect a custom domain to your CMS or pay for upgrade fees. With HubSpot, you can easily connect your domain for free in just a few simple steps. Once connected, you can focus on what really matters — building a remarkable customer experience. </p>
+          </div>
+        </div><br>
+        <div class="container">
+        <div class="row">
+          <div class="col-md-6"> <br><br><br><br>
+            <h1> Grow your business with HubSpot’s customer platform.</h1> <br>
+            <p style="line-height: 28px;font-size: 20px;font-family: 'Times New Roman', Times, serif;"> Your website is one of the most important components of your customers’ experience. By leveraging HubSpot’s entire customer platform, you’ll have access to all the tools you need to start and grow a business, from forms to live chat, meetings tools, and more. Use our pre-built modules within the drag-and-drop website builder to take the guesswork out of launching a business site. Then, easily report on the impact of your website with built-in reporting, and use the entire platform to track and convert leads into customers.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/Screenshot 2026-02-26 162724.png" class="ll">
+          </div>
+        </div>
+      </div>
+      <div class="container"> 
+        <div  class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div style="background-color: #ffffff;text-align: center;border-radius: 15px;padding: 10px;">
+              <b > Have questions? Give us a call and we'll walk you through it. <br>
+                000800 050 3669 
+                      
+              </b>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div><br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5"></div>
+          <div class="col-md-2"> 
+            <div class="circle">
+              <span> 64% </span>
+            </div>
+          </div>
+          <div class="col-md-5"></div>
+        </div>
+      </div><br>
+      <H4 style="text-align: center;"> According to HubSpot internal research, 64% of web managers whose sites receive 6-10 page views per visit use HubSpot’s content management tools. </H4>
+
+        <BR></BR></BR></BR>
+    </section>
+    <section style="background-color: #042729;"><br><br><br><br>
+      <div class="row reveal"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7"> <br><br><br><br>
+            <h3 style="color: white;">Looking for enterprise features?</h3><br>
+            <p style="color: white;"> HubSpot’s customer platform offers enterprise software for marketing, sales, customer service, content management, and operations. Get premium versions of all our free features — and much more! </p><br>
+            <button class="oo">  Get a Demo </button>
+          </div>
+          <div class="col-md-5">
+            <img src="img/Screenshot 2026-03-05 125406.png" class="ee">
+          </div>
+        </div>
+      </div><br><br>
+
+    </section>
+    <section style="background-color: white;"><br><br>
+      <div class="row reveal"></div>
+      <div class="container">
+       <div style="text-align: center;">
+        <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Related Resources</h1><br>
+        <p style="font-size: medium;"> If you’re interested in HubSpot’s drag-and-drop website builder, these related resources may help.</p><br><br>
+       </div><br>
+       <div class="container">
+        <div class="row">
+          <div class="col-md-4"> 
+            <div class="zz">
+               <img src="img/Screenshot 2026-03-05 142803.png"><br><br>
+
+               <b style="font-size: large;"> Website Builder Guide </b><br><br>
+               <p style="font-size: medium;"> Learn how to use HubSpot’s drag-and-drop website builder. </p>  <br><br>
+               <b style="font-size: large;text-align: center;"> <U> Read the Website Builder Guide  </U></b>
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="zz">
+              <img src="img/Screenshot 2026-03-05 142811.png"><br><br>
+              <b style="font-size: large;"> Website Themes and Template Marketplace </b><br><br>
+              <p style="font-size: medium;"> Pick a theme and use it as is, or customize it further to meet your business’ needs. </p> <br><br>
+              <b style="font-size: large;text-align: center;"> <U> Discover Free Themes And Template  </U></b>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="zz">
+              <img src="img/Screenshot 2026-03-05 142829.png"><br><br>
+              <b style="font-size: large;"> Website Inspiration </b><br><br>
+              <p style="font-size: medium;"> See what others have built with HubSpot’s tools, and get inspiration for your own website. </p><br><br>
+              <b style="font-size: large;text-align: center;"> <U> Get Website Inspiration </U></b>
+            </div>
+          </div>
+        </div>
+       </div>
+
+        
+
+      </div><br><br><br>
+    </section>
+    <section style="background-color: #f8f5ee;"><br><br>
+      <div class="row reveal"></div>
+      <h1 style="text-align: center;"> Frequently Asked Questions </h1><br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"> 
+            <div class="nn"> <b> > What is a free Website Builder ?</b> </div>
+            <div class="nn"> <b> > Can i design my own website with Hubspot's drag-and-drop website bulider ? </b></div>
+            <div class="nn"> <b> > What is the Diffrence between a drag-and-drop builder and a WYSIWYG editor ?</b></div>
+          </div>
+          <div class="col-md-6">
+             <div class="nn"> <b> > How long does it takes to build a website with HubSpot’s drag-and-drop editor ? </b> </div>
+             <div class="nn">  <b>>  how much does HubSpot’s drag-and-drop website building tool cost ? </b></div>
+
+          </div>
+        </div>
+      </div><br><br><br>
+
+
+
+    </section>
+    <section style="background-color: #042729;">
+      <div class="row reveal"></div>
+      <br><br>
+      <h1 style="font-family:Georgia, 'Times New Roman', Times, serif ;text-align: center;color: #ffffff;"> Popular Features in Content Hub </h1>
+      <p style="text-align: center;color: #ffffff;font-size: medium;">  The free drag-and-drop website builder is available in <b> <u>  Content Hub.</u></b> Explore additional Content Hub features below. </p> <br>
+      <br><br><div class="container">
+        <div class="row">
+          <div class="col-md-4"> <div class="chomu"> <b> <u>Calls-to-action </u></b> <br> <br>
+        <p> convert visitors into leads with calls-to-actions you can personalize , test ,  adn optimize. </p>
+
+      
+      </div></div>
+          <div class="col-md-4"> <div class="chomu"> <b> <u> Video Hosting </u></b> <br> <br>
+          <p> Embed videos and measure their performance in marketing nad customer service collateral. </p></div></div>
+          <div class="col-md-4"> <div class="chomu"> <b> <u>Free Landing Page Buiilder </u></b> <br><br>
+            <p> Create and test beautiful landing pages that generate leads and look great on any devices. </p>
+          </div></div>
+        </div>
+      </div><br><br><br>
+
+    </section>
+    
+    <section class="footer-section">
+      <div class="row reveal"></div>
+
+<div class="container">
+<div class="row footer-content">
+
+<div class="col-md-5 footer-column">
+
+<div class="row">
+
+<div class="col-md-6">
+<h5>Popular Features</h5>
+
+<p>All Products And Features</p>
+<p>Free Meeting Scheduler App</p>
+<p>Breeze AI Tools</p>
+<p>Email Tracking Software</p>
+<p>AI Content Writer</p>
+<p>AI Website Generator</p>
+<p>Email Marketing Software</p>
+<p>Lead Management Software</p>
+<p>AI Email Writer</p>
+
+</div>
+
+<div class="col-md-6"><br><br>
+
+<p>Free Website Builder</p>
+<p>Sales Email Templates</p>
+<p>Free Online Form Builder</p>
+<p>Free Chatbot Builder</p>
+<p>Free Live Chat Builder</p>
+<p>Marketing Analytics</p>
+<p>Free Landing Page Builder</p>
+<p>Free Web Hosting</p>
+
+</div>
+
+</div>
+</div>
+
+<div class="col-md-7 footer-column">
+
+<div class="row">
+
+<div class="col-md-4">
+<h5>Free Tools</h5>
+
+<p>See all Free Business Tools</p>
+<p> SEO Grader</p>
+<p> Website Grader</p>
+<p> Make My Persona</p>
+<p> Email Signature Generator</p>
+<p> Blog Ideas Generator</p>
+<p> Invoice Generator</p>
+<p> Business Name Generator</p>
+<p> Software Comparison Library</p>
+<p> Website Templates</p>
+<p> Campaign Assistant</p>
+<p> Landing Page Creator </p>
+
+</div>
+
+<div class="col-md-4">
+
+<h5>Company</h5>
+
+<p>About Us</p>
+<p>Careers</p>
+<p>Management Team</p>
+<p>Board of Directors</p>
+<p>Investor Relations</p>
+<p>Blog</p>
+<p>Sustainability</p>
+<p>Contact Us</p>
+
+</div>
+
+<div class="col-md-4">
+
+<h5>Customers</h5>
+
+<p>Customer Support</p>
+<p>Join a Local Group</p>
+
+<h5 style="margin-top:30px;">Partners</h5>
+
+<p>All Partners Program</p>
+<p>Solutions Partner Program</p>
+<p>Technology Partner Program</p>
+<p>HubSpot for Startups</p>
+<p>Affiliate Program</p>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="footer-social">
+
+<img src="img/communication.png" class="social-icon">
+<img src="img/instagram.png" class="social-icon">
+<img src="img/youtube (1).png" class="social-icon">
+<img src="img/twitter.png" class="social-icon">
+<img src="img/linkedin.png" class="social-icon">
+<img src="img/tik-tok (1).png" class="social-icon">
+
+</div>
+
+<div class="footer-logo">
+
+<img src="img/Screenshot 2026-03-06 162528.png">
+
+</div>
+
+<div class="footer-legal">
+
+Legal Center | Privacy Policy | Security | Website Accessibility | Manage Cookies
+
+</div>
+
+</div>
+
+</section>
+<section class="reveal"></section>
+<!-- Floating Chat Button -->
+<div class="chat-container">
+
+    <div id="chatBox" class="chat-box">
+
+<h4>Need Help?</h4>
+
+<p id="chatText"></p>
+
+<input type="text" placeholder="Type your message">
+
+<button class="send-btn">Send</button>
+
+</div>
+
+    <div class="chat-button" onclick="toggleChat()">
+        💬
+    </div>
+
+</div>
+<script>
+
+function toggleChat(){
+
+var chatBox=document.getElementById("chatBox");
+
+if(chatBox.style.display==="block"){
+chatBox.style.display="none";
+}
+else{
+chatBox.style.display="block";
+typeMessage();
+}
+
+}
+
+var message="Hi 👋 Welcome to HubSpot. How can we help you today?";
+var i=0;
+
+function typeMessage(){
+
+document.getElementById("chatText").innerHTML="";
+i=0;
+
+function typing(){
+
+if(i<message.length){
+document.getElementById("chatText").innerHTML+=message.charAt(i);
+i++;
+setTimeout(typing,40);
+}
+
+}
+
+typing();
+
+}
+
+</script>
+
+
+
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+
+var winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+var scrolled = (winScroll / height) * 100;
+
+document.getElementById("scrollBar").style.width = scrolled + "%";
+
+
+
+var topBtn = document.getElementById("topBtn");
+
+if (winScroll > 300){
+topBtn.style.display = "block";
+}else{
+topBtn.style.display = "none";
+}
+
+});
+
+
+
+document.getElementById("topBtn").onclick = function(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+};
+
+</script>
+
+    
+<button id="topBtn">↑</button>
+<script>
+  let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+
+};
+
+topBtn.onclick=function(){
+window.scrollTo({top:0,behavior:"smooth"});
+
+};
+function revealOnScroll() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
+
+
+
+<div class="progress-circle" id="progressCircle">
+  <svg width="70" height="70">
+    <circle cx="35" cy="35" r="30" id="bg"></circle>
+    <circle cx="35" cy="35" r="30" id="progress"></circle>
+  </svg>
+  <span id="progressText">0%</span>
+</div>
+<script>
+  const progressCircle = document.getElementById("progress");
+const progressText = document.getElementById("progressText");
+const progressWrap = document.getElementById("progressCircle");
+
+const radius = 30;
+const circumference = 2 * Math.PI * radius;
+
+progressCircle.style.strokeDasharray = circumference;
+
+window.addEventListener("scroll", () => {
+
+  const scrollTop = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const percent = Math.round((scrollTop / height) * 100);
+
+  const offset = circumference - (percent / 100) * circumference;
+  progressCircle.style.strokeDashoffset = offset;
+
+  progressText.innerText = percent + "%";
+});
+
+
+progressWrap.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<SCript>const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+
+let mouseX = 0, mouseY = 0;
+let posX = 0, posY = 0;
+
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  cursor.style.left = mouseX + "px";
+  cursor.style.top = mouseY + "px";
+});
+
+function animate(){
+  posX += (mouseX - posX) * 0.15;
+  posY += (mouseY - posY) * 0.15;
+
+  follower.style.left = posX + "px";
+  follower.style.top = posY + "px";
+
+  requestAnimationFrame(animate);
+}
+animate();
+const hoverElements = document.querySelectorAll("a, button, .zz");
+
+hoverElements.forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    follower.classList.add("cursor-grow");
+  });
+
+  el.addEventListener("mouseleave", () => {
+    follower.classList.remove("cursor-grow");
+  });
+});
+document.addEventListener("mousedown", () => {
+  follower.classList.add("cursor-click");
+});
+
+document.addEventListener("mouseup", () => {
+  follower.classList.remove("cursor-click");
+});
+
+</SCript>
+
+</body>
+</html>

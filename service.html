@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="icon" href="img/favicon.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Service Hub | CloudKart</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f5f9ff;
+color:#333;
+overflow-x:hidden;
+}
+
+
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index: 1000;
+}
+
+.logo{
+font-weight:bold;
+font-size:22px;
+color:#ff5c35;
+}
+
+.nav-links a{
+margin-left:25px;
+text-decoration:none;
+color:#444;
+font-weight:500;
+}
+
+
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+padding:120px 8%;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#555;
+margin-bottom:30px;
+font-size:18px;
+}
+
+.hero button{
+padding:14px 32px;
+border:none;
+background:#ff5c35;
+color:white;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+}
+
+
+.chat-box{
+background:white;
+border-radius:15px;
+padding:25px;
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.message{
+margin-bottom:15px;
+padding:12px 16px;
+border-radius:20px;
+width:max-content;
+max-width:80%;
+font-size:14px;
+}
+
+.user{
+background:#e6f0ff;
+margin-left:auto;
+}
+
+.agent{
+background:#f1f1f1;
+}
+
+.flow{
+padding:100px 8%;
+text-align:center;
+}
+
+.flow h2{
+font-size:34px;
+margin-bottom:70px;
+}
+
+.steps{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.step{
+background:white;
+padding:30px;
+border-radius:12px;
+flex:1;
+min-width:220px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:.3s;
+}
+
+.step:hover{
+transform:translateY(-6px);
+}
+
+.step i{
+font-size:32px;
+color:#ff5c35;
+margin-bottom:15px;
+}
+
+
+
+.cards{
+padding:100px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+
+
+.pricing-section{
+padding:120px 8%;
+background:#f3f8ff;
+text-align:center;
+}
+
+.pricing-title{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.pricing-sub{
+color:#555;
+margin-bottom:70px;
+}
+
+.pricing-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.price-card{
+background:white;
+padding:35px;
+border-radius:14px;
+text-align:left;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:0.35s;
+}
+
+.price-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+.price-card h2{
+margin:12px 0;
+}
+
+.price-card h3{
+font-size:28px;
+margin:10px 0;
+color:#ff5c35;
+}
+
+.price-card span{
+font-size:16px;
+color:#777;
+}
+
+.price-card ul{
+margin-top:20px;
+line-height:2;
+}
+
+.price-btn{
+margin-top:25px;
+padding:12px 22px;
+border:none;
+background:#ff5c35;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.highlight{
+border:2px solid #ff5c35;
+transform:scale(1.05);
+}
+
+
+
+.pricing-bottom{
+margin-top:70px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.demo-btn{
+background:#ff5c35;
+color:white;
+border:none;
+padding:14px 30px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.trial-btn{
+background:white;
+border:2px solid #ff5c35;
+color:#ff5c35;
+padding:14px 30px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.trial-btn:hover{
+background:#ff5c35;
+color:white;
+}
+
+
+
+.satisfaction{
+padding:120px 8%;
+text-align:center;
+background:white;
+}
+
+.meter{
+width:220px;
+height:220px;
+border-radius:50%;
+border:12px solid #e6e6e6;
+border-top:12px solid #ff5c35;
+margin:40px auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+font-weight:bold;
+}
+
+
+.cta{
+background:#ff5c35;
+color:white;
+text-align:center;
+padding:120px 8%;
+}
+
+.cta h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.cta button{
+padding:15px 35px;
+border:none;
+background:white;
+color:#ff5c35;
+border-radius:30px;
+cursor:pointer;
+}
+
+
+
+.footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+.nav-links a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+position:relative;
+padding-bottom:4px;
+}
+
+.nav-links a:hover{
+color:#ff5c35;
+}
+
+.nav-links a.active{
+color:#ff5c35;
+}
+
+.nav-links a.active::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:3px;
+background:#ff5c35;
+border-radius:2px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo"> HubSpot</div>
+
+<div class="nav-links">
+<a href="index.html" class="active">Home</a>
+<a href="#">Products</a>
+<a href="#">Pricing</a>
+<a href="#">Resources</a>
+</div>
+</div>
+
+<section class="hero">
+
+<div>
+
+<h1>Service Hub</h1>
+
+<p>
+Deliver fast and personalized support with live chat,
+ticket automation, and a powerful customer service platform.
+</p>
+
+<button>Start Supporting</button>
+
+</div>
+
+<div class="chat-box">
+
+<div class="message agent">Hi! How can I help you today?</div>
+<div class="message user">I'm having trouble accessing my account.</div>
+<div class="message agent">I'll help you reset your password.</div>
+<div class="message user">Thanks! That worked.</div>
+
+</div>
+
+</section>
+
+<section class="flow">
+
+<h2>How Customer Support Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<i class="fa-solid fa-comment"></i>
+<h3>Customer Message</h3>
+<p>A user contacts support through chat or email.</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-ticket"></i>
+<h3>Ticket Created</h3>
+<p>The system automatically creates a support ticket.</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-headset"></i>
+<h3>Agent Response</h3>
+<p>Your support team solves the issue quickly.</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-star"></i>
+<h3>Feedback</h3>
+<p>The customer leaves a satisfaction rating.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>Knowledge Base</h3>
+<p>Create help articles so customers can solve problems themselves.</p>
+</div>
+
+<div class="card">
+<h3>Automation</h3>
+<p>Automatically assign tickets and notify support agents.</p>
+</div>
+
+<div class="card">
+<h3>Team Inbox</h3>
+<p>Manage all customer messages from one shared inbox.</p>
+</div>
+
+</section>
+
+
+<section class="pricing-section">
+
+<h1 class="pricing-title">Scale Without Limits: Service Hub Pricing</h1>
+
+<p class="pricing-sub">Customer service software that scales seamlessly.</p>
+
+<div class="pricing-container">
+
+<div class="price-card">
+<h2>Free</h2>
+<p>No credit card required</p>
+<h3>$0<span>/month</span></h3>
+<ul>
+<li>✔ Contact management</li>
+<li>✔ Ticketing</li>
+<li>✔ Team email</li>
+</ul>
+<button class="price-btn">Get Started</button>
+</div>
+
+<div class="price-card">
+<h2>Starter</h2>
+<p>Starts at</p>
+<h3>$15 <span>$20/month</span></h3>
+<p>for each seat*</p>
+<ul>
+<li>✔ Simple ticket automation</li>
+<li>✔ Multiple ticket pipelines</li>
+<li>✔ Live chat</li>
+</ul>
+<button class="price-btn">Start Trial</button>
+</div>
+
+<div class="price-card highlight">
+<h2>Professional</h2>
+<p>Starts at</p>
+<h3>$100<span>/month</span></h3>
+<p>per seat</p>
+<ul>
+<li>✔ Help desk workspace</li>
+<li>✔ Customer success workspace</li>
+<li>✔ Breeze customer agent</li>
+<li>✔ Knowledge base</li>
+</ul>
+<button class="price-btn">Choose Plan</button>
+</div>
+
+<div class="price-card">
+<h2>Enterprise</h2>
+<p>Starts at</p>
+<h3>$150<span>/month</span></h3>
+<p>per seat</p>
+<ul>
+<li>✔ Skill-based routing</li>
+<li>✔ Conditional SLAs</li>
+<li>✔ Interactive voice response</li>
+<li>✔ Customer journey analytics</li>
+</ul>
+<button class="price-btn">Contact Sales</button>
+</div>
+
+</div>
+
+<div class="pricing-bottom">
+
+<button class="demo-btn">Demo premium editions</button>
+
+<button class="trial-btn">Start 14-day free trial</button>
+
+</div>
+
+</section>
+
+<section class="satisfaction">
+
+<h2>Customer Satisfaction</h2>
+
+<div class="meter">95%</div>
+
+<p>Our support system helps companies achieve excellent customer satisfaction.</p>
+
+</section>
+
+<section class="cta">
+
+<h2>Deliver Better Customer Support</h2>
+
+<button>Get Started</button>
+
+</section>
+
+<div class="footer">
+
+<p>© 2026 HubSpot. All Rights Reserved To Savan Patel.</p>
+
+</div>
+
+</body>
+</html>

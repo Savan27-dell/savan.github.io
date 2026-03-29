@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About HubSpot</title>
+    <link rel="icon" href="img/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f9fc;
+color:#333;
+}
+
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:white;
+box-shadow:0 3px 15px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#ff5c35;
+}
+
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#ff5c35;
+}
+
+
+.hero{
+background:linear-gradient(135deg,#ff5c35,#ff7a59);
+color:white;
+text-align:center;
+padding:140px 8%;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+max-width:750px;
+margin:auto;
+line-height:1.7;
+}
+
+
+
+.trusted{
+padding:80px 8%;
+text-align:center;
+}
+
+.trusted h3{
+margin-bottom:30px;
+color:#777;
+}
+
+.logos{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:50px;
+font-size:22px;
+color:#999;
+}
+
+
+
+.story{
+padding:110px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.story img{
+width:100%;
+border-radius:12px;
+}
+
+.story h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.products{
+padding:110px 8%;
+background:#fff;
+text-align:center;
+}
+
+.products h2{
+font-size:36px;
+margin-bottom:60px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:30px;
+}
+
+.product{
+background:#f8faff;
+padding:35px;
+border-radius:12px;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.product:hover{
+transform:translateY(-8px);
+}
+
+.product i{
+font-size:34px;
+color:#ff5c35;
+margin-bottom:12px;
+}
+
+
+
+.timeline{
+padding:110px 8%;
+background:#f8faff;
+}
+
+.timeline h2{
+text-align:center;
+font-size:36px;
+margin-bottom:60px;
+}
+
+.timeline-item{
+max-width:700px;
+margin:25px auto;
+padding:25px;
+background:white;
+border-left:5px solid #ff5c35;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+
+
+.team{
+padding:110px 8%;
+text-align:center;
+}
+
+.team h2{
+font-size:36px;
+margin-bottom:50px;
+}
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.member{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.member:hover{
+transform:translateY(-10px);
+}
+
+.member img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+
+
+.stats{
+background:#ff5c35;
+color:white;
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+padding:90px 8%;
+text-align:center;
+}
+
+.stat{
+margin:20px;
+}
+
+.stat h2{
+font-size:42px;
+}
+
+
+
+
+.footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:30px;
+}
+
+
+.contact-cta{
+background:linear-gradient(135deg,#ff5c35,#ff7a59);
+color:white;
+text-align:center;
+padding:100px 10%;
+}
+
+.contact-cta h2{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.contact-cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+opacity:0.9;
+}
+
+.cta-btn{
+background:white;
+color:#ff5c35;
+padding:12px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+
+
+.contact-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+padding:120px 10%;
+background:#f8faff;
+}
+
+
+
+.contact-left h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.contact-left p{
+margin-bottom:35px;
+color:#555;
+}
+
+.contact-cards{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+display:flex;
+gap:15px;
+align-items:center;
+transition:0.3s;
+}
+
+.contact-card:hover{
+transform:translateX(6px);
+}
+
+.contact-card i{
+font-size:22px;
+color:#ff5c35;
+}
+
+
+
+
+.contact-form{
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-form h3{
+margin-bottom:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.contact-form button{
+background:#ff5c35;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+background:#e34f2c;
+}
+
+
+@media(max-width:900px){
+
+.contact-section{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo">HubSpot</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="#">Products</a>
+<a href="about.html">About</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<section class="hero">
+<h1>About HubSpot</h1>
+<p>HubSpot is a leading CRM platform that helps businesses grow better by connecting marketing, sales, content management, and customer service tools into one powerful platform.</p>
+</section>
+
+<section class="trusted">
+<h3>Trusted by leading companies worldwide</h3>
+<div class="logos">
+<span>Google</span>
+<span>Shopify</span>
+<span>Slack</span>
+<span>Stripe</span>
+<span>Atlassian</span>
+</div>
+</section>
+
+<section class="story">
+
+<div>
+<h2>Our Story</h2>
+<p>
+HubSpot was founded in 2006 by Brian Halligan and Dharmesh Shah at MIT.
+They believed businesses needed a better way to attract and engage customers.
+This idea led to the concept of inbound marketing.
+Today, HubSpot helps thousands of companies grow better.
+</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+
+</section>
+
+<section class="products">
+
+<h2>Our Platform</h2>
+
+<div class="product-grid">
+
+<div class="product">
+<i class="fa-solid fa-globe"></i>
+<h3>CMS Hub</h3>
+<p>Build fast, secure websites.</p>
+</div>
+
+<div class="product">
+<i class="fa-solid fa-bullhorn"></i>
+<h3>Marketing Hub</h3>
+<p>Generate leads and automate marketing.</p>
+</div>
+
+<div class="product">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Sales Hub</h3>
+<p>Manage pipelines and close deals.</p>
+</div>
+
+<div class="product">
+<i class="fa-solid fa-headset"></i>
+<h3>Service Hub</h3>
+<p>Deliver great customer support.</p>
+</div>
+
+<div class="product">
+<i class="fa-solid fa-gear"></i>
+<h3>Operations Hub</h3>
+<p>Connect apps and automate processes.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="timeline">
+
+<h2>HubSpot Journey</h2>
+
+<div class="timeline-item">
+<strong>2006</strong> – HubSpot founded at MIT
+</div>
+
+<div class="timeline-item">
+<strong>2014</strong> – HubSpot goes public
+</div>
+
+<div class="timeline-item">
+<strong>2018</strong> – Launch of CRM platform
+</div>
+
+<div class="timeline-item">
+<strong>Today</strong> – 200,000+ customers worldwide
+</div>
+
+</section>
+
+<section class="team">
+
+<h2>Leadership Team</h2>
+
+<div class="team-grid">
+
+<div class="member">
+<img src="img/WhatsApp Image 2026-03-12 at 12.53.00 PM.jpeg">
+<h3>  Jaiswal Taksh </h3>
+<p>Co-Founder</p>
+</div>
+
+<div class="member">
+<img src="img/WhatsApp Image 2026-03-12 at 12.53.24 PM (1).jpeg">
+<h3> Het Patel </h3>
+<p>Co-Founder & CTO</p>
+</div>
+
+<div class="member">
+<img src="img/WhatsApp Image 2026-03-12 at 12.53.24 PM.jpeg">
+<h3>Patel Savan </h3>
+<p>CEO</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>200K+</h2>
+<p>Customers</p>
+</div>
+
+<div class="stat">
+<h2>120+</h2>
+<p>Countries</p>
+</div>
+
+<div class="stat">
+<h2>7K+</h2>
+<p>Employees</p>
+</div>
+
+<div class="stat">
+<h2>99%</h2>
+<p>Satisfaction</p>
+</div>
+
+</section>
+
+
+
+<section class="contact-cta">
+
+<h2>Let’s Grow Better Together</h2>
+
+<p>
+Have questions about HubSpot products or want to learn how our platform
+can help your business grow? Our team is here to help.
+</p>
+
+<a href="#contact" class="cta-btn">Contact Our Team</a>
+
+</section>
+
+
+<section id="contact" class="contact-section">
+
+<div class="contact-left">
+
+<h2>Contact HubSpot</h2>
+
+<p>
+Our experts are ready to help you discover how HubSpot's CRM platform
+can transform your marketing, sales, and customer service experience.
+</p>
+
+<div class="contact-cards">
+
+<div class="contact-card">
+<i class="fa-solid fa-location-dot"></i>
+<h4>Headquarters</h4>
+<p>Vadodara, Gujarat, India </p>
+</div>
+
+<div class="contact-card">
+<i class="fa-solid fa-envelope"></i>
+<h4>Email Us</h4>
+<p>support@hubspot.com</p>
+</div>
+
+<div class="contact-card">
+<i class="fa-solid fa-phone"></i>
+<h4>Call Us</h4>
+<p>+91 9106018233</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<h3>Send us a message</h3>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<input type="text" placeholder="Subject">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</section>
+
+
+<div class="footer">
+<p>© 2026 HubSpot All Rights Reserved To Savan Patel.</p>
+</div>
+
+</body>
+</html>
